@@ -2,6 +2,8 @@
     "C_Cpp.default.compilerPath": "c:\\Users\\tssat\\Downloads\\msys2-x86_64-20241208.exe",
     "files.associations": {
         "vector": "cpp",
-        "stack": "cpp"
-    }
+        "stack": "cpp",
+        "queue": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
