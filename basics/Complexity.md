@@ -16,3 +16,10 @@
    -> space that you take to solve the problem.
    ## Input Space 
    -> the space that you take to store the system.
+
+   **Example:**
+   ```
+     int a , b; // this needs input values.
+
+     int c = a + b // this needs auxiliary space.
+   ```
