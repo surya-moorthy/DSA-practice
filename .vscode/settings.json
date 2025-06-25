@@ -4,7 +4,10 @@
         "vector": "cpp",
         "stack": "cpp",
         "queue": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "tuple": "cpp",
+        "deque": "cpp",
+        "string": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
