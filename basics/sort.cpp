@@ -2,6 +2,33 @@
 
 using namespace std;
 
+// quick sort : Time complexity : O(nlogn) Space Complexity : O(1) , here we are iterating through only with the partition index has high in the qs func , not the all the elements(n elements) that is why space comp. is : O(1)  
+
+void qs(int arr[],int low , int high){
+     if(low < high){
+         int partitiionIndex = partition(arr,low,high);
+         qs(arr,low,partitiionIndex - 1);
+         qs(arr,partitiionIndex + 1,high);
+     }
+}
+
+int partition(int arr[],int low,int high) {
+    pivot = arr[low];
+    int i = low;
+    int j = high;
+    
+    while(low < high){
+        while(arr[i] <= arr[pivot] && i <= high - 1){
+            i++;
+        }
+        while(arr[j] > arr[pivot] && j>=low + 1 ){
+            j++;
+        }
+        if(i<j) swap(arr[i],arr[j]);
+    }
+    return j;
+}
+
 // selection sort
 
 // time complexity : n(n+1)/2 = O(n*2)
