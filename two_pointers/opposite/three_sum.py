@@ -6,17 +6,32 @@ def threeSum(nums):
 
     nums = sorted(nums)
 
-    while(l < r):
-        if(r - l - 1 >= 1):
-            for k in range(l + 1, r):
-                if(nums[l] + nums[r] + nums[k] == 0):
-                    if(nums[l] != nums[r] and nums[r] != nums[k] and nums[l] != nums[k]):
-                        lst.append(list((nums[l], nums[k] , nums[r])))
+    n = len(nums)
+
+    for i in range(n - 2):
+
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue
         
-        if(abs(l) >= abs(r)):
-            l += 1
-        else:
-            r -= 1
+        j , k = i + 1, n - 1
+
+        while(j < k):
+            sum = nums[i] + nums[j] + nums[k]
+
+            if(sum > 0):
+                k -= 1
+            elif(sum < 0):
+                j += 1
+            else:
+                lst.append([nums[i],nums[j],nums[k]])
+                j += 1
+                k -= 1
+
+            while(nums[j] == nums[j - 1]):
+                j += 1
+
+            while(nums[k] == nums[k + 1]):
+                k -= 1
     
     print(lst)
 
