@@ -23,4 +23,6 @@ build/
 htmlcov/
 .tox/
 .coverage
-*.log   
+*.log
+
+a.out
